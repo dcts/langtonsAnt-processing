@@ -4,4 +4,5 @@
 - nbrOfRows -> determines the nbr of cells on the y-axis
 - pxPerCell -> how big is each cell (min value allowed is 2).
 - renderSpeed -> set between 1 and 5000
+
 these inputs determine the size of the window. If the windowsize is higher than your screensize the algorithm will not start and a message is displayed to the console. Have fun!
