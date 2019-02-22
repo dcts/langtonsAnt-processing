@@ -6,9 +6,10 @@
 int nbrOfCols   = 150;     // set nbr of cols 
 int nbrOfRows   = 150;     // set nbr of rows
 int pxPerCell   = 3;       // min value is 2
-int renderSpeed = 200;     // 1: slow, 100: fast, 1000: ultrafast
+int renderSpeed = 100;     // 1: slow, 100: fast, 1000: ultrafast
 // initialize Objects
 Grid grid = new Grid(nbrOfCols, nbrOfRows, pxPerCell);
+Grid gridColor = new Grid(nbrOfCols, nbrOfRows, pxPerCell);
 Ant ant = new Ant(nbrOfCols/2, nbrOfRows/2);
 
 // initialize window
@@ -25,11 +26,15 @@ void setup() {
 }
 
 void draw() {
-  grid.render();               // update the grid
-  ant.render(color(255,0,0));  // paint ant in red
+  println("starting draw");
+  gridColor.matrixColor[ant.posX][ant.posY] = 255;
+  gridColor.renderColor();       // update the grid
+  //ant.render(color(255,0,0));  // paint ant in red
   // renderSpeed
   for (int i=0; i<renderSpeed; i++) {
     ant.action();
+    gridColor.matrixColor[ant.posX][ant.posY] = 255;
+    gridColor.matrixColor = H.lowerMatrixCol(gridColor.matrixColor, 0.99999);
   }
 }
 
