@@ -16,3 +16,7 @@ int pxPerCell   = 3;
 int renderSpeed = 1500;
 ```
 ![langtonsant](https://user-images.githubusercontent.com/44790691/53268564-c0691180-36e6-11e9-8e4d-fdf84d8f698f.gif)
+
+### Red Rendering (coming soon)
+This rendering option is currently in development (see branch "RedRendering")
+![langtonsantred](https://user-images.githubusercontent.com/44790691/53277573-cd94f900-3704-11e9-8594-881136206bf9.gif)
